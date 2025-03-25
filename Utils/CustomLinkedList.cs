@@ -15,7 +15,7 @@ namespace Data_Structures.Utils
             Head = null;
         }
 
-        public void add(object value)
+        public void add(Incident value)
         {
             Node root = new Node(value, null);
             if (Head == null)
@@ -46,11 +46,65 @@ namespace Data_Structures.Utils
             {
                 while (root != null )
                 {
-                    Incident incident = new Incident();
-                    incident = (Incident)root.Value;
-                    Console.WriteLine(incident.IncidentName);
+                    //Incident incident = new Incident();
+                    //incident = (Incident)root.Value;
+                    Console.WriteLine(root.Value.IncidentName);
                     root = root.Next;
                 }
+            }
+        }
+
+        public Node Search(Incident item)
+        {
+
+            if (Head == null)
+                return null;
+
+            if (Head.Value.Equals(item) && Head.Next == null)
+            {
+                return Head;
+            }
+            else
+            {
+                Node temp = Head;
+                while (temp.Next != null && !temp.Value.Equals(item))
+                {
+                    temp = temp.Next;
+                }
+                return temp;
+
+            }
+        }
+
+        public void Remove(Incident item)
+        {
+            if (Head == null)
+            {
+                return;
+            }
+
+            if (Head.Next == null && Head.Value.Id.Equals(item.Id))
+            {
+                Head = null;
+            }
+
+            if (Head.Next != null && Head.Value.Id.Equals(item.Id))
+            {
+                Head = Head.Next;
+            }
+            else
+            {
+                Node temp = Head;
+               Node prev = null;
+
+                while (temp != null && !temp.Value.Equals(item))
+                {
+                    prev = temp;
+                    temp = temp.Next;
+
+                }
+
+                prev.Next = temp.Next;
             }
         }
     }

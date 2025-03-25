@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Data_Structures.Utils
 {
-    public class Node
+    public class GenericNode<T>
     {
-        public Incident Value;
-        public Node Next;
-        public Node(Incident value, Node next) {
-           Value = value;
+        public T Value;
+        public GenericNode<T> Next;
+
+        public GenericNode(T value, GenericNode<T> next)
+        {
+            Value = value;
             Next = next;
         }
     }
