@@ -21,7 +21,6 @@ namespace Data_Structures.Utils
             for (int i = s.Length - 1; i >= 0; i--)
             {
                 char c = s[i];
-
                 if (c < '0' || c > '9')
                     throw new FormatException("Input string contains non-numeric characters.");
 
