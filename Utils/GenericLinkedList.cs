@@ -8,7 +8,7 @@ namespace Data_Structures.Utils
 {
     public class GenericLinkedList<T>
     {
-        GenericNode<T> head;
+        public GenericNode<T> head;
 
         public GenericLinkedList()
         {

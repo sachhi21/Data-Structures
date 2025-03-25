@@ -29,7 +29,13 @@ class Program
 
         genericLinkedList.Add(20);
         genericLinkedList.Add(30);
+
+        genericLinkedList.Add(40);
         genericLinkedList.Add(50);
+        genericLinkedList.Add(60);
+        node = RemoveKthLinkedListEnd<int>.RemoveKthFromEndFromLinkedList(genericLinkedList.head, 2);
+
+
         genericLinkedList.Remove(30);
         genericLinkedList.Print();
 
