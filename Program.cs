@@ -35,6 +35,16 @@ class Program
 
         GenericNode<int> n = genericLinkedList.Search(50);
 
+        GenericDoubleLinkedList<int> genericDoubleLinkedList = new GenericDoubleLinkedList<int>();  
+        genericDoubleLinkedList.AddLast(50);
+        genericDoubleLinkedList.AddLast(10);
+        genericDoubleLinkedList.AddLast(20);
+        genericDoubleLinkedList.AddLast(30);
+        genericDoubleLinkedList.AddLast(50);
+        genericDoubleLinkedList.AddFirst(100);
+        genericDoubleLinkedList.PrintForward();
+        genericDoubleLinkedList.PrintBackward();
+
 
 
 
