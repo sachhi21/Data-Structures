@@ -80,6 +80,22 @@ namespace Data_Structures.Utils
                 }
         }
 
+        public void Print(GenericNode<T> listhead)
+        {
+            GenericNode<T> node = listhead;
+
+            if (node == null)
+                return;
+
+            else
+                while (node != null)
+                {
+                    Console.WriteLine(node.Value);
+                    node = node.Next;
+                }
+        }
+
+
         public GenericNode<T> Search(T item)
         {
 
