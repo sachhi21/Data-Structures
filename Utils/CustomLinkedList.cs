@@ -17,7 +17,7 @@ namespace Data_Structures.Utils
 
         public void add(Incident value)
         {
-            Node root = new Node(value, null);
+            Node root = new Node(value);
             if (Head == null)
             {
                 Head = root;

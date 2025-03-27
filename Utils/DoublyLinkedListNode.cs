@@ -12,11 +12,11 @@ namespace Data_Structures.Utils
         public DoublyLinkedListNode<T> Next;
         public DoublyLinkedListNode<T> Prev;
 
-        public DoublyLinkedListNode(T value, DoublyLinkedListNode<T> next = null, DoublyLinkedListNode<T> prev = null)
+        public DoublyLinkedListNode(T value)
         {
             Value = value;
-            Next = next;
-            Prev = prev;
+            Next = null;
+            Prev = null;
         }
     }
 }

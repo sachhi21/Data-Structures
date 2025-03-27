@@ -13,7 +13,7 @@ class Program
         Incident incident2 = new Incident();    
         incident2.Id = 2;
         incident2.IncidentName = "Incident2";
-        Node newroot = new Node(incident, null);
+        Node newroot = new Node(incident);
 
         CustomLinkedList linkedList = new CustomLinkedList();
         linkedList.add(incident);
@@ -24,7 +24,7 @@ class Program
         linkedList.Remove(incident);
         linkedList.Remove(incident);
 
-        GenericNode<int> node = new GenericNode<int>(10, null);
+        GenericNode<int> node = new GenericNode<int>(10);
         GenericLinkedList<int> genericLinkedList = new GenericLinkedList<int>();
         GenericLinkedList<int> genericLinkedList2 = new GenericLinkedList<int>();
 

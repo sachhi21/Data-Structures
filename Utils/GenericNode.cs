@@ -11,10 +11,10 @@ namespace Data_Structures.Utils
         public T Value;
         public GenericNode<T> Next;
 
-        public GenericNode(T value, GenericNode<T> next)
+        public GenericNode(T value)
         {
             Value = value;
-            Next = next;
+            Next = null;
         }
     }
 }

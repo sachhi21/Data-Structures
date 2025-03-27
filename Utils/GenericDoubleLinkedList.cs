@@ -22,7 +22,7 @@ namespace Data_Structures.Utils
             DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(item);
 
             if (head == null) {
-                head = tail = new DoublyLinkedListNode<T>(item, null, null);
+                head = tail = new DoublyLinkedListNode<T>(item);
                 return;
                     }
 

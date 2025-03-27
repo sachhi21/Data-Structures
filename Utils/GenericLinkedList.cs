@@ -20,7 +20,7 @@ namespace Data_Structures.Utils
             //GenericNode<T> node = new GenericNode<T>( item, null ) ;
             if (head == null)
             {
-                head = new GenericNode<T>(item, null);
+                head = new GenericNode<T>(item);
                 return;
             }
             else
@@ -30,7 +30,7 @@ namespace Data_Structures.Utils
                 {
                     temp = temp.Next;
                 }
-                temp.Next = new GenericNode<T>(item, null);
+                temp.Next = new GenericNode<T>(item);
             }
         }
 
