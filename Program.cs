@@ -68,7 +68,9 @@ class Program
         Console.WriteLine(FirstUniqueCharacter.FindUniqueChar("SACHINRAMPUR"));
         Console.WriteLine(SecondUniqueChar.FindUniqueChar("SACHINRAMPUR"));
         Console.WriteLine(LastUniqueChar.FindLastUniqueChar("SACHINRAMPUR"));
-
+        ArraySum.Sum(new List<int> { 1, 2, 3, 4, 5, 6, });
+        List<int>  l = new List<int>();
+        l =  CompareTriplets.compareTriplets(new List<int> { 1, 2, 3 }, new List<int> { 3, 2, 1 });
 
 
 
