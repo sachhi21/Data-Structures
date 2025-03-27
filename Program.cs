@@ -64,6 +64,12 @@ class Program
         genericDoubleLinkedList.PrintForward();
         genericDoubleLinkedList.PrintBackward();
 
+       Console.WriteLine( CommonWord.FindCommonWord("sss sss sss d ss ee rr ffg"));
+        Console.WriteLine(FirstUniqueCharacter.FindUniqueChar("SACHINRAMPUR"));
+        Console.WriteLine(SecondUniqueChar.FindUniqueChar("SACHINRAMPUR"));
+        Console.WriteLine(LastUniqueChar.FindLastUniqueChar("SACHINRAMPUR"));
+
+
 
 
 
