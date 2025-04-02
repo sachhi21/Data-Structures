@@ -20,8 +20,6 @@ namespace Data_Structures.InterviewQuestions
                 else
                     result[word] = 1;
 
-   
-
             }
             return result.OrderByDescending(p => p.Value).First().Key;
 

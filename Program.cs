@@ -1,11 +1,67 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Data_Structures.InterviewQuestions;
 using Data_Structures.Utils;
+using System.Collections;
 
 class Program
 {
     static void Main(string[] args)
-    {   
+    {                     
+        int steps = 4;        
+                                                          
+        Stack<Stair> stairsStack = new Stack<Stair>();
+
+        // Starting at step 0 with an empty list of visited steps
+        stairsStack.Push(new Stair(0, new List<List<int>>()));
+
+        while (stairsStack.Count > 0)
+        {
+            Stair currentStair = stairsStack.Pop();
+            if (currentStair._number == steps)
+            {
+                // Print all visited paths when the goal is reached
+                Console.WriteLine("Path to reach step " + steps + ":");
+                foreach (var path in currentStair._visited)
+                {
+                    Console.WriteLine(string.Join(" -> ", path));
+                }
+                Console.WriteLine(); // Newline for clarity
+            }
+
+            // Generate possible next steps
+            int nextonestair = currentStair._number + 1;
+            int nexttwostair = currentStair._number + 2;
+
+            // Check if next steps are valid and add to the stack
+            if (nextonestair <= steps)
+            {
+                var newVisited = new List<List<int>>(currentStair._visited);
+                newVisited.Add(new List<int>(currentStair._visited.Count == 0 ? new List<int> { 0 } : currentStair._visited[^1])); // Copy last visited
+                newVisited[^1].Add(nextonestair); // Add the current step to the path
+                stairsStack.Push(new Stair(nextonestair, newVisited));
+            }
+
+            if (nexttwostair <= steps)
+            {
+                var newVisited = new List<List<int>>(currentStair._visited);
+                newVisited.Add(new List<int>(currentStair._visited.Count == 0 ? new List<int> { 0 } : currentStair._visited[^1])); // Copy last visited
+                newVisited[^1].Add(nexttwostair); // Add the current step to the path
+                stairsStack.Push(new Stair(nexttwostair, newVisited));
+            }
+        }
+         
+
+
+
+        StackArray<int> stack = new StackArray<int>(5);
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+        stack.Push(4);
+        stack.Push(5);
+        Console.WriteLine(stack.pop());    
+        List<int> ints = new List<int>() { 1,2,2,3,4,56,4,8,9};
+        ints = UniqueNumber.FindUniqueNumber(ints);
         Console.WriteLine(Maths.parseInt("5021"));
         Incident incident = new Incident();
         incident.Id = 1;
@@ -64,16 +120,13 @@ class Program
         genericDoubleLinkedList.PrintForward();
         genericDoubleLinkedList.PrintBackward();
 
-       Console.WriteLine( CommonWord.FindCommonWord("sss sss sss d ss ee rr ffg"));
+        Console.WriteLine( CommonWord.FindCommonWord("sss sss sss d ss ee rr ffg"));
         Console.WriteLine(FirstUniqueCharacter.FindUniqueChar("SACHINRAMPUR"));
         Console.WriteLine(SecondUniqueChar.FindUniqueChar("SACHINRAMPUR"));
         Console.WriteLine(LastUniqueChar.FindLastUniqueChar("SACHINRAMPUR"));
         ArraySum.Sum(new List<int> { 1, 2, 3, 4, 5, 6, });
         List<int>  l = new List<int>();
         l =  CompareTriplets.compareTriplets(new List<int> { 1, 2, 3 }, new List<int> { 3, 2, 1 });
-
-
-
 
 
     }
