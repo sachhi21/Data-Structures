@@ -6,7 +6,40 @@ using System.Collections;
 class Program
 {
     static void Main(string[] args)
-    {                     
+    {
+        int[][] matrix = new int[][]
+{
+    new int[] {1, 2, 3},
+    new int[] {4, 0, 6},
+    new int[] {7, 8, 9}
+};
+        ListNode node1 = new ListNode(10);
+
+        ListNode node2 = new ListNode(20);
+        ListNode node3= new ListNode(30);
+        ListNode node4 = new ListNode(40);
+        ListNode node5 = new ListNode(50);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+
+
+        node1 = RemoveNthFromEndLinkedList.RemoveNthFromEnd(node1, 2);
+
+        //int[,] numbers = { { 1, 1, 1 }, { 1, 0, 1 }, { 1, 1, 1 } };
+        SetZerosMatrix.PrintMatrix(SetZerosMatrix.SetZeroes(matrix));
+        WordDistance.MinDistance("horse", "ros");
+        string input = "/home/user/./Downloads/../Pictures/././";
+        string input2 = "/a/../../b/../c//.//";
+        string input3 = "/";
+        string input4 = "/.../a/../b/c/../d/./";
+        Console.WriteLine(SimplyPathUnix.SimplifyPath(input));
+        string ouput2 = SimplyPathUnix.SimplifyPath(input2);
+        string ouput3 = SimplyPathUnix.SimplifyPath(input3);
+        string ouput4 = SimplyPathUnix.SimplifyPath(input4);
+
         int steps = 4;        
                                                           
         Stack<Stair> stairsStack = new Stack<Stair>();
