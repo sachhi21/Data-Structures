@@ -7,7 +7,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[][] matrix = new int[][]
+
+
+        timeConversion.s12Into24hour("07:05:45PM");
+        // Test case 1: Alice wins
+        int[] piles1 = { 3, 7, 2, 3 };
+        Console.WriteLine(StoneGame.StoneGameWin(piles1));  // Output: True (Alice wins)
+
+        // Test case 2: Alice wins
+        int[] piles2 = { 5, 3, 4, 5 };
+        Console.WriteLine(StoneGame.StoneGameWin(piles2));  // Output: True (Alice wins)
+
+        // Test case 3: Bob wins
+        int[] piles3 = { 1, 5, 233, 7 };
+        Console.WriteLine(StoneGame.StoneGameWin(piles3));  // Output: True (Alice wins)
+    
+    int[][] matrix = new int[][]
 {
     new int[] {1, 2, 3},
     new int[] {4, 0, 6},
