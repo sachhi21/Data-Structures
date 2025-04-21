@@ -7,8 +7,15 @@ class Program
 {
     static void Main(string[] args)
     {
+        int[] numbers = { 7, 5, 6, 10, 3, 8 };
+        int[] numberss = { 5, 2, 6, 10, 6, 3, 8 };
+        numbers = SelectionSortDemo.SelectionSort(numbers);
 
+        numbers = BubbleSort.BubbleSortDemo(numbers);
+        numberss = InsertionSortDemo.InsertionSort(numberss);
+        CrackPassword.CrackPasswords("12234566");
 
+        VerticalLimit.SolveVerticalLimit(new List<int> { 100,100,50,50,50 }, 258);
         timeConversion.s12Into24hour("07:05:45PM");
         // Test case 1: Alice wins
         int[] piles1 = { 3, 7, 2, 3 };
@@ -21,6 +28,8 @@ class Program
         // Test case 3: Bob wins
         int[] piles3 = { 1, 5, 233, 7 };
         Console.WriteLine(StoneGame.StoneGameWin(piles3));  // Output: True (Alice wins)
+
+
     
     int[][] matrix = new int[][]
 {
