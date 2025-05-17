@@ -7,6 +7,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        string[] words = { "fast", "food", "fool", "word", "full", "book" };
+        TrieSearchEngine searchEngine = new TrieSearchEngine();
+        searchEngine.SerachTrie("fo", words);
         int[] numbers = { 7, 5, 6, 10, 3, 8 };
         int[] numberss = { 5, 2, 6, 10, 6, 3, 8 };
         numbers = SelectionSortDemo.SelectionSort(numbers);
