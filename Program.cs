@@ -7,6 +7,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        DutchNationalFlagSort.SortFlags(new int[] {2,0,1,2,1,0});
+        bool issimilar = AnagramSimiliarWords.IsSimilar("loop", "poot");
+        
+        int Height = LinksHeight.Height(new int[] { 2, -1, 3, 1, 5 }, 0);
+
+        Console.WriteLine(Height);
+        StringBuildertoN.BuildString(10);
         string[] words = { "fast", "food", "fool", "word", "full", "book" };
         TrieSearchEngine searchEngine = new TrieSearchEngine();
         searchEngine.SerachTrie("fo", words);
